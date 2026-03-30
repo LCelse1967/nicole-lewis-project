@@ -1,0 +1,152 @@
+
+body {
+  font-family:Georgia, 'Times New Roman', Times, serif ;
+  line-height: 1.6;
+  color:   #494d5f;
+  tab-size: 4;
+  background-color:  #8458B3;
+}
+header {
+  text-align: center;
+
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+
+.sidebar {
+  right: 0;
+  width: 5%;
+  background-color: #bf8df4;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+  
+}
+.contents {
+  left: -19px;
+  padding-right: 10px;
+  width: 15%;
+  background-color: #bf8df4;
+  position: fixed;
+  height: 100%;
+  text-align: center;
+
+
+}
+
+.sidebar img {
+  width: 100%;
+  height: 25%;
+  object-fit: contain;
+
+}
+
+
+.clickable-icon:hover img
+ {
+  opacity: 0.7;
+}
+.main {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 55%;
+  overflow: auto;
+  margin-left: 15%;
+  margin-right: 5%;
+  border: 2px solid black;
+  padding: 1%;
+  background-color: #bf8df4;
+}
+
+article{
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 55%;
+  overflow: auto;
+  margin-left: 15%;
+  margin-right: 5%;
+  border: 2px solid black;
+  padding: 1%;
+  background-color: #bf8df4;
+
+}
+
+.main-content {
+  background-color: #e5eaf5;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+
+
+
+#blogcontents {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.dated-posts {
+  text-align: center;
+  list-style: none;
+  counter-reset: date-counter;
+}
+h2 {
+  font-style: italic;
+  font-weight: lighter;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 10%;
+  }
+
+  .contents {
+    width: 20%;
+  }
+
+  .main {
+    margin-left: 20%;
+    margin-right: 10%;
+  }
+}
+@media (max-width: 600px) {
+
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar,
+  .contents {
+    position: static;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+
+  .sidebar img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .main {
+    width: 100%;
+    margin: 0;
+    border: none;
+    padding: 10px;
+  }
+
+  .dated-posts {
+    padding: 0;
+  }
+}
